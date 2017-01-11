@@ -7,6 +7,8 @@ $(document).ready(function() {
     var verbInput = $("input#verb").val();
     var nounInput = $("input#noun").val();
 
+    exclamationInput = exclamationInput.toUpperCase();
+
     $(".person1").text(person1Input);
     $(".person2").text(person2Input);
     $(".animal").text(animalInput);
@@ -15,6 +17,16 @@ $(document).ready(function() {
     $(".noun").text(nounInput);
 
     $("#story").show();
+
+    event.preventDefault();
+  });
+
+  $("#capitalDiv form").submit(function(event) {
+    var userInput = $("input#capital").val();
+
+    userInput = userInput.toUpperCase();
+
+    $(".usrSentence").text(userInput);
 
     event.preventDefault();
   });
